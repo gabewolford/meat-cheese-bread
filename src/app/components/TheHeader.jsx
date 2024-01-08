@@ -11,7 +11,9 @@ export default function TheHeader() {
           Sunday, January 7th, 2024
         </p>
         <Link href="/">
-          <h1 className={`${supplySansBold.className} text-center lg:text-8xl`}>
+          <h1
+            className={`${supplySansBold.className} text-center lg:text-[116px] leading-none lg:mb-2`}
+          >
             Meat Cheese Bread
           </h1>
         </Link>

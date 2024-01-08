@@ -132,6 +132,13 @@ export default function TheFooter() {
             ))}
           </nav>
         </section>
+        <section
+          className={`${supplyMonoRegular.className} flex border-b-2 border-black w-full text-center`}
+        >
+          <div className={`text-xs w-full py-4 uppercase h-full`}>
+            © 2024 Meat Cheese Bread. All Rights Reserved.
+          </div>
+        </section>
       </div>
     </footer>
   );
