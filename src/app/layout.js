@@ -1,4 +1,5 @@
 import "./globals.css";
+import { supplyMonoUltralight } from "./styles/fonts";
 import TheHeader from "./components/TheHeader";
 import TheFooter from "./components/TheFooter";
 
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col relative min-h-screen max-w-screen">
         <TheHeader />
         <main className="mx-6 mb-6 flex-1 border-x-2 border-black">
-          <div className="p-6">{children}</div>
+          <div className={`${supplyMonoUltralight.className} p-6`}>
+            {children}
+          </div>
         </main>
         <TheFooter />
       </body>
