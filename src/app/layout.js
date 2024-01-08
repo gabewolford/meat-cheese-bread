@@ -1,9 +1,6 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import TheHeader from "./components/TheHeader";
 import TheFooter from "./components/TheFooter";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Meat Cheese Bread",
@@ -16,9 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
-      <body
-        className={`flex flex-col relative min-h-screen max-w-screen ${inter.className}`}
-      >
+      <body className="flex flex-col relative min-h-screen max-w-screen">
         <TheHeader />
         <main className="mx-6 mb-6 flex-1 border-x-2 border-black">
           <div className="p-6">{children}</div>
