@@ -2,8 +2,6 @@ import Link from "next/link";
 import { supplyMonoRegular, supplyMonoUltralight } from "../styles/fonts";
 
 export default function TheFooter() {
-  const navItems = ["menu", "catering", "about", "location", "gallery"];
-
   return (
     <footer className="absolute bottom-0 border-black w-full mb-4 md:mb-6">
       <div className="mx-4 md:mx-6 border-black border-t-2 border-x-2">

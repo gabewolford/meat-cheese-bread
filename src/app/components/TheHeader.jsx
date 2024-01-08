@@ -2,8 +2,6 @@ import Link from "next/link";
 import { supplySansBold, supplyMonoRegular } from "../styles/fonts";
 
 export default function TheHeader() {
-  const navItems = ["menu", "catering", "about", "location", "gallery"];
-
   return (
     <header className="flex flex-col border-2 border-black mx-4 mt-4 md:mx-6 md:mt-6">
       <section className="flex flex-col gap-2 lg:gap-6 p-4 lg:p-6">
