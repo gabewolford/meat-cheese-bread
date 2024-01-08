@@ -52,6 +52,7 @@ export default function TheFooter() {
                     href="https://www.instagram.com/meatcheesebreadportland/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="instagram"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -72,6 +73,7 @@ export default function TheFooter() {
                     href="https://www.facebook.com/meatcheesebread/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="facebook"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
