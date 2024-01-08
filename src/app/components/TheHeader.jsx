@@ -4,7 +4,7 @@ export default function TheHeader() {
   const navItems = ["menu", "catering", "about", "location", "gallery"];
 
   return (
-    <header className="flex flex-col border-b-2 border-black">
+    <header className="flex flex-col border-2 border-black mx-6 mt-6">
       <section className="flex flex-col lg:gap-4 lg:p-6">
         <p className="text-center uppercase">Sunday, January 7th, 2024</p>
         <Link href="/">

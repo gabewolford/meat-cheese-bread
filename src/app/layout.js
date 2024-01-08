@@ -15,12 +15,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
-        className={`flex flex-col min-h-full max-w-screen border-2 border-black m-6 ${inter.className}`}
+        className={`flex flex-col relative min-h-screen max-w-screen ${inter.className}`}
       >
         <TheHeader />
-        <main className="p-6">{children}</main>
+        <main className="mx-6 mb-6 flex-1 border-x-2 border-black">
+          <div className="p-6">{children}</div>
+        </main>
         <TheFooter />
       </body>
     </html>
