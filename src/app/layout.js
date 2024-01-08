@@ -16,9 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className="">
       <body className="flex flex-col relative min-h-screen max-w-screen">
         <TheHeader />
-        <main className="mx-6 mb-6 flex-1 border-x-2 border-black">
+        <main className="mx-4 md:mx-6 mb-4 md:mb-6 flex-1 border-x-2 border-black">
           <div
-            className={`${supplyMonoUltralight.className} p-6 min-h-[600px]`}
+            className={`${supplyMonoUltralight.className} p-4 md:p-6 min-h-[600px]`}
           >
             {children}
           </div>
