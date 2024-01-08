@@ -17,7 +17,7 @@ export default function TheFooter() {
           </div>
 
           <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-4 lg:p-6 gap-4 lg:gap-6">
-            <h6 className={`${supplyMonoRegular.className}`}>Email Us</h6>
+            <h6 className={`${supplyMonoRegular.className}`}>Email Us </h6>
             <a
               href="mailto:meatcheesebread@gmail.com"
               target="_blank"
