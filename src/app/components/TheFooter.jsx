@@ -3,7 +3,7 @@ import { supplyMonoRegular, supplyMonoUltralight } from "../styles/fonts";
 
 export default function TheFooter() {
   return (
-    <footer className="absolute bottom-0 border-black w-full mb-4 md:mb-6">
+    <footer className="border-black w-full mb-4 md:mb-6">
       <div className="mx-4 md:mx-6 border-black border-t-2 border-x-2">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 lg:gap-6 uppercase text-sm md:text-base">
           <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-4 lg:p-6">
