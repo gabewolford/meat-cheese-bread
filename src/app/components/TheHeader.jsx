@@ -28,9 +28,9 @@ export default function TheHeader() {
           <p className="order-2 col-span-1 md:order-1 md:w-1/3 uppercase text-xs lg:text-base">
             7am - 3pm Daily
           </p>
-          <p className="order-1 mb-2 md:mb-0 col-span-2 md:order-2 md:w-1/3 flex justify-center uppercase text-xs lg:text-base">
+          <h2 className="order-1 mb-2 md:mb-0 col-span-2 md:order-2 md:w-1/3 flex justify-center uppercase text-xs lg:text-base">
             A Portland, Oregon Restaurant
-          </p>
+          </h2>
           <a
             href="tel:+15032341700"
             className="order-3 col-span-1 md:order-3 md:w-1/3 flex justify-end text-xs lg:text-base"
