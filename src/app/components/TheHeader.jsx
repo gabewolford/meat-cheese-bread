@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import headerLogo from "../../../public/images/meat-cheese-bread-header-logo.svg";
-import { supplySansBold, supplyMonoRegular } from "../styles/fonts";
+import { supplyMonoRegular } from "../styles/fonts";
+import CurrentDate from "./CurrentDate";
 
 export default function TheHeader() {
   return (
@@ -10,7 +11,7 @@ export default function TheHeader() {
         <p
           className={`${supplyMonoRegular.className} text-xs md:text-base text-center uppercase`}
         >
-          Sunday, January 7th, 2024
+          <CurrentDate />
         </p>
         <Link href="/" className="flex justify-center">
           <h1 className="hidden">Meat Cheese Bread</h1>
