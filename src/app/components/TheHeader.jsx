@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import headerLogo from "../../../public/images/meat-cheese-bread-header-logo.svg";
 import { supplySansBold, supplyMonoRegular } from "../styles/fonts";
 
 export default function TheHeader() {
@@ -10,12 +12,13 @@ export default function TheHeader() {
         >
           Sunday, January 7th, 2024
         </p>
-        <Link href="/">
-          <h1
-            className={`${supplySansBold.className} flex flex-wrap justify-center text-center text-[34px] md:text-7xl lg:text-8xl xl:text-[116px] leading-none lg:mb-2`}
-          >
-            Meat Cheese Bread
-          </h1>
+        <Link href="/" className="flex justify-center">
+          <h1 className="hidden">Meat Cheese Bread</h1>
+          <Image
+            src={headerLogo}
+            alt="Meat Cheese Bread"
+            className="w-full md:w-5/6"
+          />
         </Link>
 
         <div
