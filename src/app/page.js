@@ -1,6 +1,3 @@
-import Image from "next/image";
-import heroImage from "../../public/images/logo.png";
-
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
   alternates: {
@@ -35,9 +32,5 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  return (
-    <>
-      <Image src={heroImage} alt="meat cheese bread hero" />
-    </>
-  );
+  return <h1>Home Page</h1>;
 }
