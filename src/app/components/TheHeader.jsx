@@ -19,6 +19,7 @@ export default function TheHeader() {
             src={headerLogo}
             alt="Meat Cheese Bread"
             className="w-full md:w-5/6 mb-1.5"
+            priority={true}
           />
         </Link>
 
