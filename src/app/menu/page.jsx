@@ -88,7 +88,7 @@ export default function MenuPage() {
             <p className={`${supplyMonoRegular.className} uppercase`}>
               Granola and Yogurt -{" "}
               <span className={`${supplyMonoUltralight.className} lowercase`}>
-                Nancy’s honey yogurt, house-made granola
+                Nancy's honey yogurt, house-made granola
               </span>
             </p>
             <p className={`${supplyMonoRegular.className} uppercase`}>
