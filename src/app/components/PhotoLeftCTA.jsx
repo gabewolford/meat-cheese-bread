@@ -22,7 +22,7 @@ export default function PhotoLeftCTA({
         />
       </div>
       <div className="order-2 md:order-1 col-span-1 md:col-span-2 flex justify-center items-center border-t-2 border-black p-4 md:p-6">
-        <Image src={logo} />
+        <Image src={logo} alt="Meat Cheese Bread" />
       </div>
     </section>
   );
