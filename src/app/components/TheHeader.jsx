@@ -3,6 +3,7 @@ import Image from "next/image";
 import headerLogo from "../../../public/images/meat-cheese-bread-header-logo.svg";
 import { supplyMonoRegular } from "../styles/fonts";
 import CurrentDate from "./CurrentDate";
+import NavLinks from "./NavLinks";
 
 export default function TheHeader() {
   return (
@@ -44,38 +45,7 @@ export default function TheHeader() {
       <section
         className={`${supplyMonoRegular.className} flex border-t-2 border-black`}
       >
-        <nav className="grid grid-cols-2 md:flex md:flex-row w-full text-center">
-          <Link
-            href="/menu"
-            className="col-span-2 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full border-b-2 md:border-b-0 md:border-r-2 border-black"
-          >
-            Menu
-          </Link>
-          <Link
-            href="/catering"
-            className="col-span-1 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full border-b-2 md:border-b-0 border-r-2 border-black"
-          >
-            Catering
-          </Link>
-          <Link
-            href="/about"
-            className="col-span-1 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full border-b-2 md:border-b-0 md:border-r-2 border-black"
-          >
-            About
-          </Link>
-          <Link
-            href="/location"
-            className="col-span-1 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full border-r-2 border-black"
-          >
-            Location
-          </Link>
-          <Link
-            href="/gallery"
-            className="col-span-1 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full"
-          >
-            Gallery
-          </Link>
-        </nav>
+        <NavLinks />
       </section>
     </header>
   );

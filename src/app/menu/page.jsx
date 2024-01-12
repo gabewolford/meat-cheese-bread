@@ -1,3 +1,5 @@
+import PhotoRightCTA from "../components/PhotoRightCTA";
+
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
   alternates: {
@@ -32,5 +34,18 @@ export const metadata = {
 };
 
 export default function MenuPage() {
-  return <h1>Menu Page</h1>;
+  return (
+    <>
+      <section className="w-full h-[500px] p-4 md:p-6">
+        Current Menu Goes Here
+      </section>
+
+      <PhotoRightCTA
+        heading="Ready to order?"
+        linkTo="tel:+15032341700"
+        buttonText="Give us a call"
+        hoverColor="green"
+      />
+    </>
+  );
 }

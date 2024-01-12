@@ -1,3 +1,13 @@
+import PhotoRightCTA from "./components/PhotoRightCTA";
+import PhotoLeftCTA from "./components/PhotoLeftCTA";
+import DoubleImage from "./components/DoubleImage";
+import TripleImage from "./components/TripleImage";
+import QuadrupleImage from "./components/QuadrupleImage";
+import red from "../../public/images/red.png";
+import yellow from "../../public/images/yellow.png";
+import brown from "../../public/images/brown.png";
+import green from "../../public/images/green.png";
+
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
   alternates: {
@@ -32,5 +42,55 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  return <h1>Home Page</h1>;
+  return (
+    <>
+      <TripleImage
+        photo1={red}
+        altText1="red placeholder"
+        photo2={yellow}
+        altText2="yellow placeholder"
+        photo3={brown}
+        altText3="brown placeholder"
+      />
+
+      <PhotoRightCTA
+        heading="Are you hungry yet?"
+        linkTo="/menu"
+        buttonText="Explore the menu"
+        hoverColor="red"
+      />
+
+      <DoubleImage
+        photo1={red}
+        altText1="red placeholder"
+        photo2={yellow}
+        altText2="yellow placeholder"
+      />
+
+      <PhotoLeftCTA
+        heading="Catering an event?"
+        linkTo="/catering"
+        buttonText="View catering menu"
+        hoverColor="yellow"
+      />
+
+      <QuadrupleImage
+        photo1={red}
+        altText1="red placeholder"
+        photo2={yellow}
+        altText2="yellow placeholder"
+        photo3={brown}
+        altText3="brown placeholder"
+        photo4={green}
+        altText4="green placeholder"
+      />
+
+      <PhotoRightCTA
+        heading="Are you hungry yet?"
+        linkTo="/menu"
+        buttonText="Explore the menu"
+        hoverColor="red"
+      />
+    </>
+  );
 }

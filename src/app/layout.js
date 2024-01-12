@@ -1,5 +1,5 @@
 import "./globals.css";
-import { supplyMonoRegular } from "./styles/fonts";
+import { supplySansMedium } from "./styles/fonts";
 import TheHeader from "./components/TheHeader";
 import TheFooter from "./components/TheFooter";
 
@@ -37,10 +37,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="flex flex-col relative min-h-screen max-w-screen">
         <TheHeader />
-        <main className="mx-4 md:mx-6 flex-1 border-x-2 border-black">
-          <div
-            className={`${supplyMonoRegular.className} uppercase p-4 md:p-6 min-h-fit`}
-          >
+        <main className="mx-4 md:mx-6 flex-1 border-x-2 border-black border-collapse">
+          <div className={`${supplySansMedium.className} min-h-fit`}>
             {children}
           </div>
         </main>

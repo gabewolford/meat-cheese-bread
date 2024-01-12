@@ -1,12 +1,12 @@
-import Link from "next/link";
 import { supplyMonoRegular, supplyMonoUltralight } from "../styles/fonts";
+import NavLinks from "./NavLinks";
 
 export default function TheFooter() {
   return (
     <footer className="border-black w-full mb-4 md:mb-6">
       <div className="mx-4 md:mx-6 border-black border-t-2 border-x-2">
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 lg:gap-6 uppercase text-sm md:text-base">
-          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-4 lg:p-6">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row lg:justify-around md:gap-4 lg:gap-0 uppercase text-sm md:text-base">
+          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-4 md:p-6">
             <div className="flex flex-row items-center gap-2 mb-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -130,38 +130,7 @@ export default function TheFooter() {
         <section
           className={`${supplyMonoRegular.className} flex border-y-2 border-black`}
         >
-          <nav className="grid grid-cols-2 md:flex md:flex-row w-full text-center">
-            <Link
-              href="/menu"
-              className="col-span-2 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full border-b-2 md:border-b-0 md:border-r-2 border-black"
-            >
-              Menu
-            </Link>
-            <Link
-              href="/catering"
-              className="col-span-1 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full border-b-2 md:border-b-0 border-r-2 border-black"
-            >
-              Catering
-            </Link>
-            <Link
-              href="/about"
-              className="col-span-1 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full border-b-2 md:border-b-0 md:border-r-2 border-black"
-            >
-              About
-            </Link>
-            <Link
-              href="/location"
-              className="col-span-1 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full border-r-2 border-black"
-            >
-              Location
-            </Link>
-            <Link
-              href="/gallery"
-              className="col-span-1 md:w-1/5 py-3 md:py-6 text-sm md:text-base uppercase h-full"
-            >
-              Gallery
-            </Link>
-          </nav>
+          <NavLinks />
         </section>
         <section
           className={`${supplyMonoRegular.className} flex border-b-2 border-black w-full text-center`}
