@@ -88,7 +88,7 @@ export default function MenuPage() {
             <p className={`${supplyMonoRegular.className} uppercase`}>
               Granola and Yogurt -{" "}
               <span className={`${supplyMonoUltralight.className} lowercase`}>
-                Nancy&apost;s honey yogurt, house-made granola
+                Nancy&#39;s honey yogurt, house-made granola
               </span>
             </p>
             <p className={`${supplyMonoRegular.className} uppercase`}>
@@ -124,7 +124,7 @@ export default function MenuPage() {
             <p className={`${supplyMonoRegular.className} uppercase`}>
               Egg salad -{" "}
               <span className={`${supplyMonoUltralight.className} lowercase`}>
-                egg salad, Nueske&apost;s bacon with aioli and green leaf on
+                egg salad, Nueske&#39;s bacon with aioli and green leaf on
                 toasted sourdough
               </span>
             </p>
@@ -149,7 +149,7 @@ export default function MenuPage() {
             <p className={`${supplyMonoRegular.className} uppercase`}>
               Bacon sweet potato -{" "}
               <span className={`${supplyMonoUltralight.className} lowercase`}>
-                thick cut Nueske&apost;s bacon, rosemary sweet potatoes, arugula
+                thick cut Nueske&#39;s bacon, rosemary sweet potatoes, arugula
                 and goat cheese sauce on ciabatta
               </span>
             </p>
@@ -202,7 +202,7 @@ export default function MenuPage() {
                   Pickle
                 </p>
                 <p className={`${supplyMonoRegular.className} uppercase`}>
-                  Tim&apost;s Chips
+                  Tim&#39;s Chips
                 </p>
               </div>
             </div>
