@@ -16,7 +16,7 @@ export default function QuadrupleImage({
 }) {
   return (
     <section className="grid grid-cols-8 border-t-2 border-black">
-      <div className="col-span-2 flex justify-center items-center">
+      <div className="col-span-4 lg:col-span-2 border-b-2 border-black lg:border-b-0 flex justify-center items-center">
         <Image
           src={photo1}
           alt={altText1}
@@ -24,7 +24,7 @@ export default function QuadrupleImage({
           placeholder="blur"
         />
       </div>
-      <div className="col-span-2 flex justify-center items-center border-l-2 border-black">
+      <div className="col-span-4 lg:col-span-2 flex justify-center items-center border-l-2 border-b-2 border-black lg:border-b-0">
         <Image
           src={photo2}
           alt={altText2}
@@ -32,7 +32,7 @@ export default function QuadrupleImage({
           placeholder="blur"
         />
       </div>
-      <div className="col-span-2 flex justify-center items-center border-l-2 border-black">
+      <div className="col-span-4 lg:col-span-2 flex justify-center items-center lg:border-l-2 border-black">
         <Image
           src={photo3}
           alt={altText3}
@@ -40,7 +40,7 @@ export default function QuadrupleImage({
           placeholder="blur"
         />
       </div>
-      <div className="col-span-2 flex justify-center items-center border-l-2 border-black">
+      <div className="col-span-4 lg:col-span-2 flex justify-center items-center border-l-2 border-black">
         <Image
           src={photo4}
           alt={altText4}
