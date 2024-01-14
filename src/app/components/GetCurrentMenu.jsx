@@ -93,7 +93,7 @@ const MenuComponent = () => {
           {isLoading ? (
             // Render Skeleton components while loading
             <div className="flex flex-col mb-8 md:mb-12">
-              <Skeleton count={4} className="my-1.5" />
+              <Skeleton count={6} className="my-1.5" />
               {/* Add more Skeleton components as needed */}
             </div>
           ) : (
