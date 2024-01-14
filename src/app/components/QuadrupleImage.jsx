@@ -1,7 +1,3 @@
-import red from "../../../public/images/red.png";
-import yellow from "../../../public/images/yellow.png";
-import brown from "../../../public/images/brown.png";
-import green from "../../../public/images/green.png";
 import Image from "next/image";
 
 export default function QuadrupleImage({

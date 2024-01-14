@@ -45,7 +45,7 @@ export default function MenuPage() {
           >
             -- updated 1/12/2024 --
           </p>
-          <button
+          {/* <button
             className={`${supplyMonoRegular.className} flex flex-row uppercase w-fit text-green mx-auto pl-2 hover:underline underline-offset-4 gap-2`}
           >
             <span>
@@ -66,7 +66,7 @@ export default function MenuPage() {
               </svg>
             </span>{" "}
             Printer-Friendly Menu
-          </button>
+          </button> */}
         </div>
 
         <div className="flex flex-col px-4 md:px-16 gap-4">

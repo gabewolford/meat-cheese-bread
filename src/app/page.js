@@ -1,12 +1,14 @@
 import PhotoRightCTA from "./components/PhotoRightCTA";
 import PhotoLeftCTA from "./components/PhotoLeftCTA";
 import DoubleImage from "./components/DoubleImage";
-import TripleImage from "./components/TripleImage";
 import QuadrupleImage from "./components/QuadrupleImage";
 import red from "../../public/images/red.png";
 import yellow from "../../public/images/yellow.png";
 import brown from "../../public/images/brown.png";
 import green from "../../public/images/green.png";
+import heroImage from "../../public/images/hero-image.png";
+import Image from "next/image";
+import KissingSandwichLogo from "./components/Logos/KissingSandwichLogo";
 
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
@@ -44,14 +46,22 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <TripleImage
-        photo1={red}
-        altText1="red placeholder"
-        photo2={yellow}
-        altText2="yellow placeholder"
-        photo3={brown}
-        altText3="brown placeholder"
-      />
+      {/* <section className="flex w-full">
+        <Image
+          src={heroImage}
+          alt="Meat Cheese Bread"
+          className="p-4 md:p-12"
+        />
+      </section> */}
+
+      <section className="grid grid-cols-5">
+        <div className="col-span-5 md:col-span-3 flex justify-center items-center p-4 md:p-8 md:border-r-2 border-black">
+          <h2 className="h-[350px] flex items-center">Hero Text Goes Here.</h2>
+        </div>
+        <div className="col-span-5 md:col-span-2 flex justify-center items-center  p-4 md:p-8">
+          <KissingSandwichLogo fillColorHash="#000000" />
+        </div>
+      </section>
 
       <PhotoRightCTA
         heading="Are you hungry yet?"
