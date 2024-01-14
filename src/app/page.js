@@ -46,14 +46,6 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* <section className="flex w-full">
-        <Image
-          src={heroImage}
-          alt="Meat Cheese Bread"
-          className="p-4 md:p-12"
-        />
-      </section> */}
-
       <section className="grid grid-cols-5">
         <div className="col-span-5 md:col-span-3 flex justify-center items-center p-4 md:p-8 md:border-r-2 border-black">
           <h2 className="h-[350px] flex items-center">Hero Text Goes Here.</h2>
@@ -62,13 +54,6 @@ export default function HomePage() {
           <KissingSandwichLogo fillColorHash="#000000" />
         </div>
       </section>
-
-      <PhotoRightCTA
-        heading="Are you hungry yet?"
-        linkTo="/menu"
-        buttonText="Explore the menu"
-        hoverColor="red"
-      />
 
       <DoubleImage
         photo1={red}
