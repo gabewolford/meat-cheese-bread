@@ -17,6 +17,31 @@ const MenuComponent = () => {
   const [sweetItems, setSweetItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const setItemsByCategory = (category, items) => {
+    switch (category) {
+      case "Breakfast":
+        setBreakfastItems(items);
+        break;
+      case "Cold Sandwiches":
+        setColdSandwichesItems(items);
+        break;
+      case "Hot Sandwiches":
+        setHotSandwichesItems(items);
+        break;
+      case "Salads":
+        setSaladItems(items);
+        break;
+      case "Sides":
+        setSideItems(items);
+        break;
+      case "Sweets":
+        setSweetItems(items);
+        break;
+      default:
+        break;
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -31,53 +56,11 @@ const MenuComponent = () => {
 
         setLatestUpdate(mostRecentUpdate);
 
-        // Extract breakfast items
-        const breakfastCategory = data.find(
-          (category) => category.category === "Breakfast"
-        );
-        if (breakfastCategory) {
-          setBreakfastItems(breakfastCategory.items);
-        }
-
-        // Extract cold sandwich items
-        const coldSandwichesCategory = data.find(
-          (category) => category.category === "Cold Sandwiches"
-        );
-        if (coldSandwichesCategory) {
-          setColdSandwichesItems(coldSandwichesCategory.items);
-        }
-
-        // Extract hot sandwich items
-        const hotSandwichesCategory = data.find(
-          (category) => category.category === "Hot Sandwiches"
-        );
-        if (hotSandwichesCategory) {
-          setHotSandwichesItems(hotSandwichesCategory.items);
-        }
-
-        // Extract salad items
-        const saladCategory = data.find(
-          (category) => category.category === "Salads"
-        );
-        if (saladCategory) {
-          setSaladItems(saladCategory.items);
-        }
-
-        // Extract side items
-        const sidesCategory = data.find(
-          (category) => category.category === "Sides"
-        );
-        if (saladCategory) {
-          setSideItems(sidesCategory.items);
-        }
-
-        // Extract sweet items
-        const sweetsCategory = data.find(
-          (category) => category.category === "Sweets"
-        );
-        if (sweetsCategory) {
-          setSweetItems(sweetsCategory.items);
-        }
+        // Extract items for each category
+        data.forEach((categoryData) => {
+          const { category, items } = categoryData;
+          setItemsByCategory(category, items);
+        });
       } catch (error) {
         console.error("Error fetching menu data:", error);
       }
@@ -88,16 +71,11 @@ const MenuComponent = () => {
 
   return (
     <>
-      <h2 className="text-2xl lg:text-4xl">Current Menu</h2>
+      <h2 className="text-2xl lg:text-3xl">Current Menu</h2>
       <div>
         {isLoading ? (
-          // Render Skeleton components while loading
-          <div>
-            <Skeleton width={200} />
-            {/* Add more Skeleton components as needed */}
-          </div>
+          <Skeleton width={200} />
         ) : (
-          // Render actual content when not loading
           <p
             className={`${supplyMonoUltralight.className} uppercase text-xs text-green`}
           >
@@ -110,12 +88,12 @@ const MenuComponent = () => {
 
       <div className="flex flex-col text-left">
         {/* Render breakfast items */}
-        <h3 className="text-lg lg:text-2xl text-green mb-3">Breakfast</h3>
+        <h3 className="text-2xl lg:text-3xl text-green mb-4">Breakfast</h3>
         <div>
           {isLoading ? (
             // Render Skeleton components while loading
-            <div className="flex flex-col gap-4 mb-8 lg:md:mb-12">
-              <Skeleton count={4} className="mb-2" />
+            <div className="flex flex-col mb-8 md:mb-12">
+              <Skeleton count={4} className="my-1.5" />
               {/* Add more Skeleton components as needed */}
             </div>
           ) : (
@@ -139,7 +117,9 @@ const MenuComponent = () => {
         </div>
 
         {/* Render cold sandwich items */}
-        <h3 className="text-lg lg:text-2xl text-green mb-3">Cold Sandwiches</h3>
+        <h3 className="text-2xl lg:text-3xl text-green mb-4">
+          Cold Sandwiches
+        </h3>
         <div>
           {isLoading ? (
             // Render Skeleton components while loading
@@ -168,7 +148,7 @@ const MenuComponent = () => {
         </div>
 
         {/* Render hot sandwich items */}
-        <h3 className="text-lg lg:text-2xl text-green mb-3">Hot Sandwiches</h3>
+        <h3 className="text-2xl lg:text-3xl text-green mb-4">Hot Sandwiches</h3>
         <div>
           {isLoading ? (
             // Render Skeleton components while loading
@@ -197,7 +177,7 @@ const MenuComponent = () => {
         </div>
 
         {/* Render salad items */}
-        <h3 className="text-lg lg:text-2xl text-green mb-3">Salads</h3>
+        <h3 className="text-2xl lg:text-3xl text-green mb-4">Salads</h3>
         <div>
           {isLoading ? (
             // Render Skeleton components while loading
@@ -227,12 +207,12 @@ const MenuComponent = () => {
 
         <div className="flex flex-col md:flex-row w-full">
           <div className="flex flex-col gap-4 w-full lg:w-1/2">
-            <h3 className="text-lg lg:text-2xl text-green mb-3">Sides</h3>
+            <h3 className="text-2xl lg:text-3xl text-green mb-4">Sides</h3>
             <div>
               {isLoading ? (
                 // Render Skeleton components while loading
                 <div className="flex flex-col gap-4 mb-8 lg:md:mb-12">
-                  <Skeleton count={4} width={200} className="mb-2" />
+                  <Skeleton count={5} width={200} className="mb-2" />
                   {/* Add more Skeleton components as needed */}
                 </div>
               ) : (
@@ -252,7 +232,7 @@ const MenuComponent = () => {
           </div>
 
           <div className="flex flex-col gap-4 w-full lg:w-1/2">
-            <h3 className="text-lg lg:text-2xl text-green mb-3">Sides</h3>
+            <h3 className="text-2xl lg:text-3xl text-green mb-4">Sides</h3>
             <div>
               {isLoading ? (
                 // Render Skeleton components while loading
