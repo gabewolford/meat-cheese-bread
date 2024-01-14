@@ -1,15 +1,8 @@
-import { client } from "@/src/utils/sanity/client";
+import { client } from "../../../sanity/lib/client";
 
-export async function FetchMenu() {
-  const menu = await client.fetch(`*[_type == "menu"]`);
+export async function GetMenuData() {
+  const menuData = await client.fetch(`*[_type == "menu"]`);
+  console.log(menuData);
 
-  return (
-    <ul>
-      {menu.map((item) => (
-        <li key={item._id}>
-          <a href={item?.slug.current}>{item?.title}</a>
-        </li>
-      ))}
-    </ul>
-  );
+  return menuData;
 }

@@ -7,7 +7,7 @@ export const menu = {
       name: "category",
       title: "Category",
       type: "string",
-      value: "Breakfast",
+      value: "Category",
       validation: (Rule) => Rule.required(),
       options: {
         list: [
