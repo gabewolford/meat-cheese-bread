@@ -5,7 +5,6 @@ export async function GetMenuData() {
     // cache: "no-store",
     revalidate: 60,
   });
-  console.log(menuData);
 
   return menuData;
 }
