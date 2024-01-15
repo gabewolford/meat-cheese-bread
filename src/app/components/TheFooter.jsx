@@ -6,7 +6,7 @@ export default function TheFooter() {
     <footer className="border-black w-full mb-4 md:mb-6">
       <div className="mx-4 md:mx-6 border-black border-t-2 border-x-2">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row lg:justify-around md:gap-4 lg:gap-0 uppercase text-sm md:text-base">
-          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-4 md:p-6">
+          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-6">
             <div className="flex flex-row items-center gap-2 mb-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ export default function TheFooter() {
             </a>
           </div>
 
-          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-4 lg:p-6">
+          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-6">
             <div className="flex flex-row items-center gap-2 mb-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ export default function TheFooter() {
             </a>
           </div>
 
-          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-4 lg:p-6">
+          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-6">
             <div className="flex flex-row items-center gap-2 mb-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ export default function TheFooter() {
             </a>
           </div>
 
-          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-4 lg:p-6">
+          <div className="col-span-1 md:col-span-1 lg:col-span-1 h-full p-6">
             <div className="flex flex-row items-center gap-2 mb-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
