@@ -53,7 +53,7 @@ export default function LocationPage() {
             className={`flex flex-col lg:flex-row items-center text-left gap-6 w-full`}
           >
             <div className="flex flex-col w-full lg:h-[450px] lg:w-1/2 lg:px-12 justify-around gap-6 lg:gap-0">
-              <div className="flex flex-col gap-2 text-xl">
+              <div className="flex flex-col gap-4">
                 <div className="flex flex-row items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,9 +67,7 @@ export default function LocationPage() {
                       fill="black"
                     />
                   </svg>
-                  <h6
-                    className={`${supplyMonoRegular.className} uppercase text-base`}
-                  >
+                  <h6 className={`${supplyMonoRegular.className} uppercase`}>
                     Visit Us
                   </h6>
                 </div>
