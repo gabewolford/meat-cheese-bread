@@ -2,12 +2,13 @@ import PhotoRightCTA from "../components/PhotoRightCTA";
 import {
   supplyMonoUltralight,
   supplyMonoRegular,
-  supplySansRegular,
   supplySansMedium,
 } from "../styles/fonts";
-import DoubleImage from "../components/DoubleImage";
+import QuadrupleImage from "../components/QuadrupleImage";
 import red from "../../../public/images/red.png";
 import yellow from "../../../public/images/yellow.png";
+import brown from "../../../public/images/brown.png";
+import green from "../../../public/images/green.png";
 
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
@@ -159,11 +160,15 @@ export default function LocationPage() {
         </div>
       </section>
 
-      <DoubleImage
+      <QuadrupleImage
         photo1={red}
         altText1="placeholder"
         photo2={yellow}
         altText2="placeholder"
+        photo3={brown}
+        altText3="placeholder"
+        photo4={green}
+        altText4="placeholder"
       />
 
       <PhotoRightCTA
