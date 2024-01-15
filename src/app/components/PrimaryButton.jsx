@@ -5,7 +5,7 @@ export default function PrimaryButton({ linkTo, buttonText, hoverColor }) {
   return (
     <Link
       href={linkTo}
-      className={`${supplyMonoRegular.className} bg-black w-fit p-4 hover:bg-${hoverColor} hover:scale-105 transition-color duration-500 text-white uppercase`}
+      className={`${supplyMonoRegular.className} bg-black min-w-fit max-w-fit p-4 hover:bg-${hoverColor} hover:scale-105 transition-color duration-500 text-white uppercase`}
     >
       {buttonText}
     </Link>
