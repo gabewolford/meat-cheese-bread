@@ -71,7 +71,7 @@ const MenuComponent = () => {
 
   return (
     <>
-      <h2 className="text-2xl lg:text-3xl">Current Menu</h2>
+      <h2 className="text-3xl">Current Menu</h2>
       <div>
         {isLoading ? (
           <Skeleton width={200} />
@@ -92,23 +92,25 @@ const MenuComponent = () => {
         <div>
           {isLoading ? (
             // Render Skeleton components while loading
-            <div className="flex flex-col mb-8 md:mb-12">
-              <Skeleton count={6} className="my-1.5" />
-              {/* Add more Skeleton components as needed */}
+            <div className="flex flex-col mb-12">
+              <Skeleton count={6} className="mb-3.5" />
             </div>
           ) : (
             // Render actual content when not loading
-            <ul className="flex flex-col gap-2 mb-8 lg:md:mb-12">
+            <ul className="flex flex-col gap-1 mb-12">
               {breakfastItems.map((item, index) => (
                 <li
                   key={index}
-                  className={`${supplyMonoRegular.className} uppercase`}
+                  className={`${supplyMonoRegular.className} uppercase mb-2`}
                 >
                   {item.name} -{" "}
                   <span
                     className={`${supplyMonoUltralight.className} lowercase`}
                   >
-                    {item.description}
+                    {item.description}{" "}
+                  </span>
+                  <span className={`${supplyMonoRegular.className} uppercase`}>
+                    ☞ ${item.price}
                   </span>
                 </li>
               ))}
@@ -123,23 +125,25 @@ const MenuComponent = () => {
         <div>
           {isLoading ? (
             // Render Skeleton components while loading
-            <div className="flex flex-col gap-4 mb-8 lg:md:mb-12">
-              <Skeleton count={4} className="mb-2" />
-              {/* Add more Skeleton components as needed */}
+            <div className="flex flex-col mb-12">
+              <Skeleton count={4} className="mb-3.5" />
             </div>
           ) : (
             // Render actual content when not loading
-            <ul className="flex flex-col gap-2 mb-8 lg:md:mb-12">
+            <ul className="flex flex-col gap-1 mb-12">
               {coldSandwichesItems.map((item, index) => (
                 <li
                   key={index}
-                  className={`${supplyMonoRegular.className} uppercase`}
+                  className={`${supplyMonoRegular.className} uppercase mb-2`}
                 >
                   {item.name} -{" "}
                   <span
                     className={`${supplyMonoUltralight.className} lowercase`}
                   >
-                    {item.description}
+                    {item.description}{" "}
+                  </span>
+                  <span className={`${supplyMonoRegular.className} uppercase`}>
+                    ☞ ${item.price}
                   </span>
                 </li>
               ))}
@@ -152,23 +156,25 @@ const MenuComponent = () => {
         <div>
           {isLoading ? (
             // Render Skeleton components while loading
-            <div className="flex flex-col gap-4 mb-8 lg:md:mb-12">
-              <Skeleton count={3} className="mb-2" />
-              {/* Add more Skeleton components as needed */}
+            <div className="flex flex-col mb-12">
+              <Skeleton count={4} className="mb-3.5" />
             </div>
           ) : (
             // Render actual content when not loading
-            <ul className="flex flex-col gap-2 mb-8 lg:md:mb-12">
+            <ul className="flex flex-col gap-1 mb-12">
               {hotSandwichesItems.map((item, index) => (
                 <li
                   key={index}
-                  className={`${supplyMonoRegular.className} uppercase`}
+                  className={`${supplyMonoRegular.className} uppercase mb-2`}
                 >
                   {item.name} -{" "}
                   <span
                     className={`${supplyMonoUltralight.className} lowercase`}
                   >
-                    {item.description}
+                    {item.description}{" "}
+                  </span>
+                  <span className={`${supplyMonoRegular.className} uppercase`}>
+                    ☞ ${item.price}
                   </span>
                 </li>
               ))}
@@ -181,23 +187,25 @@ const MenuComponent = () => {
         <div>
           {isLoading ? (
             // Render Skeleton components while loading
-            <div className="flex flex-col gap-4 mb-8 lg:md:mb-12">
-              <Skeleton count={4} className="mb-2" />
-              {/* Add more Skeleton components as needed */}
+            <div className="flex flex-col mb-12">
+              <Skeleton count={4} className="mb-3.5" />
             </div>
           ) : (
             // Render actual content when not loading
-            <ul className="flex flex-col gap-2 mb-8 lg:md:mb-12">
+            <ul className="flex flex-col gap-1 mb-12">
               {saladItems.map((item, index) => (
                 <li
                   key={index}
-                  className={`${supplyMonoRegular.className} uppercase`}
+                  className={`${supplyMonoRegular.className} uppercase mb-2`}
                 >
                   {item.name} -{" "}
                   <span
                     className={`${supplyMonoUltralight.className} lowercase`}
                   >
-                    {item.description}
+                    {item.description}{" "}
+                  </span>
+                  <span className={`${supplyMonoRegular.className} uppercase`}>
+                    ☞ ${item.price}
                   </span>
                 </li>
               ))}
@@ -206,24 +214,28 @@ const MenuComponent = () => {
         </div>
 
         <div className="flex flex-col md:flex-row w-full">
-          <div className="flex flex-col gap-4 w-full lg:w-1/2">
+          <div className="flex flex-col w-full lg:w-1/2">
             <h3 className="text-2xl lg:text-3xl text-green mb-4">Sides</h3>
             <div>
               {isLoading ? (
                 // Render Skeleton components while loading
-                <div className="flex flex-col gap-4 mb-8 lg:md:mb-12">
-                  <Skeleton count={5} width={200} className="mb-2" />
-                  {/* Add more Skeleton components as needed */}
+                <div className="flex flex-col mb-12">
+                  <Skeleton count={6} width={250} className="mb-3.5" />
                 </div>
               ) : (
                 // Render actual content when not loading
-                <ul className="flex flex-col gap-2 mb-8 lg:md:mb-12">
+                <ul className="flex flex-col gap-1 mb-12">
                   {sideItems.map((item, index) => (
                     <li
                       key={index}
-                      className={`${supplyMonoRegular.className} uppercase`}
+                      className={`${supplyMonoRegular.className} uppercase mb-2`}
                     >
-                      {item.name}
+                      {item.name}{" "}
+                      <span
+                        className={`${supplyMonoRegular.className} uppercase`}
+                      >
+                        ☞ ${item.price}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -231,24 +243,28 @@ const MenuComponent = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 w-full lg:w-1/2">
-            <h3 className="text-2xl lg:text-3xl text-green mb-4">Sides</h3>
+          <div className="flex flex-col w-full lg:w-1/2">
+            <h3 className="text-2xl lg:text-3xl text-green mb-4">Sweets</h3>
             <div>
               {isLoading ? (
                 // Render Skeleton components while loading
-                <div className="flex flex-col gap-4 mb-8 lg:md:mb-12">
-                  <Skeleton count={3} width={200} className="mb-2" />
-                  {/* Add more Skeleton components as needed */}
+                <div className="flex flex-col mb-12">
+                  <Skeleton count={3} width={250} className="mb-3.5" />
                 </div>
               ) : (
                 // Render actual content when not loading
-                <ul className="flex flex-col gap-2 mb-8 lg:md:mb-12">
+                <ul className="flex flex-col gap-1 mb-12">
                   {sweetItems.map((item, index) => (
                     <li
                       key={index}
-                      className={`${supplyMonoRegular.className} uppercase`}
+                      className={`${supplyMonoRegular.className} uppercase mb-2`}
                     >
-                      {item.name}
+                      {item.name}{" "}
+                      <span
+                        className={`${supplyMonoRegular.className} uppercase`}
+                      >
+                        ☞ ${item.price}
+                      </span>
                     </li>
                   ))}
                 </ul>
