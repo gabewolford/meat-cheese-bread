@@ -1,4 +1,4 @@
-import GetCurrentMenu from "../components/GetCurrentMenu";
+import GetCateringMenu from "../components/GetCateringMenu";
 import KissingSandwichLogo from "../components/Logos/KissingSandwichLogo";
 import PhotoRightCTA from "../components/PhotoRightCTA";
 
@@ -40,7 +40,7 @@ export default function CateringPage() {
     <>
       <section className="flex flex-col w-full h-fit">
         <div className="flex flex-col text-center p-6 md:p-16 pb-4 md:pb-4 gap-4 relative">
-          <GetCurrentMenu />
+          <GetCateringMenu />
           <div className="hidden md:flex absolute md:top-16 md:right-16 -z-50 w-1/4">
             <KissingSandwichLogo fillColorHash="#D3D3D3" />
           </div>

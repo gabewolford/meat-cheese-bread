@@ -10,3 +10,14 @@ export async function GetMenuData() {
 
   return menuData;
 }
+
+export async function GetCateringMenuData() {
+  const cateringMenuData = await client.fetch(
+    `*[_type == "cateringMenu"]{_updatedAt, items, category}`,
+    {
+      revalidate: 3600,
+    }
+  );
+
+  return cateringMenuData;
+}
