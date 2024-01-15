@@ -1,4 +1,5 @@
 import PhotoRightCTA from "../components/PhotoRightCTA";
+import { supplyMonoUltralight } from "../styles/fonts";
 
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
@@ -36,7 +37,16 @@ export const metadata = {
 export default function GalleryPage() {
   return (
     <>
-      <section className="w-full h-[500px] p-4 md:p-6">Gallery Page</section>
+      <section className="flex flex-col w-full h-fit">
+        <div className="flex flex-col text-center p-6 md:p-16 gap-4">
+          <h2 className="text-3xl">Photo Gallery</h2>
+          <p
+            className={`${supplyMonoUltralight.className} uppercase text-xs text-green`}
+          >
+            Coming Soon...
+          </p>
+        </div>
+      </section>
 
       <PhotoRightCTA
         heading="Are you hungry yet?"

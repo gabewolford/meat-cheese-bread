@@ -1,3 +1,5 @@
+import GetCurrentMenu from "../components/GetCurrentMenu";
+import KissingSandwichLogo from "../components/Logos/KissingSandwichLogo";
 import PhotoRightCTA from "../components/PhotoRightCTA";
 
 export const metadata = {
@@ -36,8 +38,13 @@ export const metadata = {
 export default function CateringPage() {
   return (
     <>
-      <section className="w-full h-[500px] p-4 md:p-6">
-        Catering Menu Goes Here
+      <section className="flex flex-col w-full h-fit">
+        <div className="flex flex-col text-center p-6 md:p-16 pb-4 md:pb-4 gap-4 relative">
+          <GetCurrentMenu />
+          <div className="hidden md:flex absolute md:top-16 md:right-16 -z-50 w-1/4">
+            <KissingSandwichLogo fillColorHash="#D3D3D3" />
+          </div>
+        </div>
       </section>
 
       <PhotoRightCTA
