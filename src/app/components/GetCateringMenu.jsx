@@ -1,12 +1,17 @@
 "use client";
 
-import Skeleton from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useEffect, useState } from "react";
 import { GetCateringMenuData } from "../lib/data";
-import { supplyMonoUltralight, supplyMonoRegular } from "../styles/fonts";
+import {
+  supplyMonoUltralight,
+  supplyMonoRegular,
+  supplyMonoBold,
+} from "../styles/fonts";
+import PageHeading from "./PageHeading";
 
-const GetCateringMenu = () => {
+export default function GetCateringMenu() {
   const [menuData, setMenuData] = useState([]);
   const [latestUpdate, setLatestUpdate] = useState(null);
   const [breakfastItems, setBreakfastItems] = useState([]);
@@ -70,21 +75,15 @@ const GetCateringMenu = () => {
   }, []);
 
   return (
-    <>
-      <h2 className="text-3xl">Catering Menu</h2>
-      <div>
+    <SkeletonTheme baseColor="#D2AC83" highlightColor="#BB9974">
+      <PageHeading headingText="Catering Menu" />
+      <p className={`${supplyMonoBold.className} uppercase text-sm text-green`}>
         {isLoading ? (
           <Skeleton width={200} />
         ) : (
-          <p
-            className={`${supplyMonoUltralight.className} uppercase text-xs text-green`}
-          >
-            {latestUpdate
-              ? `-- updated ${latestUpdate.toLocaleDateString()} --`
-              : ""}
-          </p>
+          `-- updated ${latestUpdate.toLocaleDateString()} --`
         )}
-      </div>
+      </p>
 
       <div className="flex flex-col text-left">
         {/* Render breakfast items */}
@@ -273,8 +272,6 @@ const GetCateringMenu = () => {
           </div>
         </div>
       </div>
-    </>
+    </SkeletonTheme>
   );
-};
-
-export default GetCateringMenu;
+}

@@ -9,6 +9,7 @@ import red from "../../../public/images/red.png";
 import yellow from "../../../public/images/yellow.png";
 import brown from "../../../public/images/brown.png";
 import green from "../../../public/images/green.png";
+import PageHeading from "../components/PageHeading";
 
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
@@ -48,7 +49,7 @@ export default function LocationPage() {
     <>
       <section className="flex flex-col w-full h-fit">
         <div className="flex flex-col text-center p-6 md:p-16 gap-8">
-          <h2 className="text-3xl">Our Location</h2>
+          <PageHeading headingText="Our Location" />
           <div
             className={`flex flex-col lg:flex-row items-center text-left gap-6 w-full`}
           >

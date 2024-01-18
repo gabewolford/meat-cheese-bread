@@ -4,6 +4,7 @@ import JohnLogo from "../components/Logos/JohnLogo";
 import DoubleImage from "../components/DoubleImage";
 import red from "../../../public/images/red.png";
 import yellow from "../../../public/images/yellow.png";
+import PageHeading from "../components/PageHeading";
 
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
@@ -43,9 +44,9 @@ export default function AboutPage() {
     <>
       <section className="flex flex-col w-full h-fit">
         <div className="flex flex-col text-center p-6 md:p-16 gap-8">
-          <h2 className="text-3xl">About Us</h2>
+          <PageHeading headingText="About Us" />
           <div
-            className={`${supplyMonoUltralight.className} flex flex-col lg:flex-row items-center text-left gap-6 w-full`}
+            className={`${supplyMonoUltralight.className} flex flex-col lg:flex-row items-center text-left gap-6 lg:gap-0 w-full`}
           >
             <div className="flex flex-col gap-8 w-full lg:w-1/2 lg:p-12 lg:text-lg">
               <p>

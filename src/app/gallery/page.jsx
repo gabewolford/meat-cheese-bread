@@ -1,5 +1,6 @@
+import PageHeading from "../components/PageHeading";
 import PhotoRightCTA from "../components/PhotoRightCTA";
-import { supplyMonoUltralight } from "../styles/fonts";
+import { supplyMonoBold } from "../styles/fonts";
 
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
@@ -39,9 +40,9 @@ export default function GalleryPage() {
     <>
       <section className="flex flex-col w-full h-fit">
         <div className="flex flex-col text-center p-6 md:p-16 gap-4">
-          <h2 className="text-3xl">Photo Gallery</h2>
+          <PageHeading headingText="Photo Gallery" />
           <p
-            className={`${supplyMonoUltralight.className} uppercase text-xs text-green`}
+            className={`${supplyMonoBold.className} uppercase text-sm text-green`}
           >
             Coming Soon...
           </p>

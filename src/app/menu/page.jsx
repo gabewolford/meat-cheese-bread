@@ -41,8 +41,8 @@ export default function MenuPage() {
       <section className="flex flex-col w-full h-fit">
         <div className="flex flex-col text-center p-6 md:p-16 pb-4 md:pb-4 gap-4 relative">
           <GetCurrentMenu />
-          <div className="hidden md:flex absolute md:top-16 md:right-16 -z-50 w-1/4">
-            <KissingSandwichLogo fillColorHash="#D3D3D3" />
+          <div className="hidden xl:flex absolute md:top-16 md:right-16 -z-50 w-1/4">
+            <KissingSandwichLogo fillColorHash="#000000" />
           </div>
         </div>
       </section>

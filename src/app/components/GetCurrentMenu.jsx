@@ -1,12 +1,17 @@
 "use client";
 
-import Skeleton from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useEffect, useState } from "react";
 import { GetMenuData } from "../lib/data";
-import { supplyMonoUltralight, supplyMonoRegular } from "../styles/fonts";
+import {
+  supplyMonoUltralight,
+  supplyMonoRegular,
+  supplyMonoBold,
+} from "../styles/fonts";
+import PageHeading from "./PageHeading";
 
-const MenuComponent = () => {
+export default function GetCurrentMenu() {
   const [menuData, setMenuData] = useState([]);
   const [latestUpdate, setLatestUpdate] = useState(null);
   const [breakfastItems, setBreakfastItems] = useState([]);
@@ -70,53 +75,47 @@ const MenuComponent = () => {
   }, []);
 
   return (
-    <>
-      <h2 className="text-3xl">Current Menu</h2>
+    <SkeletonTheme baseColor="#D2AC83" highlightColor="#BB9974">
+      <PageHeading headingText="Current Menu" />
       <div>
-        {isLoading ? (
-          <Skeleton width={200} />
-        ) : (
-          <p
-            className={`${supplyMonoUltralight.className} uppercase text-xs text-green`}
-          >
-            {latestUpdate
-              ? `-- updated ${latestUpdate.toLocaleDateString()} --`
-              : ""}
-          </p>
-        )}
+        <p
+          className={`${supplyMonoBold.className} uppercase text-sm text-green`}
+        >
+          {isLoading ? (
+            <Skeleton width={200} />
+          ) : (
+            `-- updated ${latestUpdate.toLocaleDateString()} --`
+          )}
+        </p>
       </div>
 
       <div className="flex flex-col text-left">
         {/* Render breakfast items */}
         <h3 className="text-2xl lg:text-3xl text-green mb-4">Breakfast</h3>
-        <div>
-          {isLoading ? (
-            // Render Skeleton components while loading
-            <div className="flex flex-col mb-12">
-              <Skeleton count={6} className="mb-3.5" />
-            </div>
-          ) : (
-            // Render actual content when not loading
-            <ul className="flex flex-col gap-1 mb-12">
-              {breakfastItems.map((item, index) => (
-                <li
-                  key={index}
-                  className={`${supplyMonoRegular.className} uppercase mb-2`}
-                >
-                  {item.name} -{" "}
-                  <span
-                    className={`${supplyMonoUltralight.className} lowercase`}
-                  >
-                    {item.description}{" "}
-                  </span>
-                  <span className={`${supplyMonoRegular.className} uppercase`}>
-                    ☞ ${item.price}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+        {isLoading ? (
+          // Render Skeleton components while loading
+          <div className="flex flex-col mb-12">
+            <Skeleton count={6} className="mb-3.5" />
+          </div>
+        ) : (
+          // Render actual content when not loading
+          <ul className="flex flex-col mb-12">
+            {breakfastItems.map((item, index) => (
+              <li
+                key={index}
+                className={`${supplyMonoRegular.className} uppercase mb-2`}
+              >
+                {item.name} -{" "}
+                <span className={`${supplyMonoUltralight.className} lowercase`}>
+                  {item.description}{" "}
+                </span>
+                <span className={`${supplyMonoRegular.className} uppercase`}>
+                  ☞ ${item.price}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* Render cold sandwich items */}
         <h3 className="text-2xl lg:text-3xl text-green mb-4">
@@ -273,8 +272,6 @@ const MenuComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </SkeletonTheme>
   );
-};
-
-export default MenuComponent;
+}
