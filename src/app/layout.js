@@ -34,7 +34,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="bg-[url('/images/brown-paper-background.png')] bg-no-repeat bg-center bg-fixed bg-cover"
+    >
       <body className="flex flex-col relative min-h-screen max-w-screen">
         <TheHeader />
         <main className="mx-4 md:mx-6 flex-1 border-x-2 border-black border-collapse">
