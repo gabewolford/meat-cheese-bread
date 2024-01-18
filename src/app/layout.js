@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="bg-[url('/images/brown-paper-background.png')] bg-no-repeat bg-center bg-fixed bg-cover"
+      className="bg-[url('/images/brown-paper-background.webp')] bg-no-repeat bg-center bg-fixed bg-cover"
     >
       <body className="flex flex-col relative min-h-screen max-w-screen">
         <TheHeader />
