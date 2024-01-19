@@ -74,6 +74,10 @@ export default function GetCateringMenu() {
     fetchData();
   }, []);
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <SkeletonTheme baseColor="#D2AC83" highlightColor="#BB9974">
       <PageHeading headingText="Catering Menu" />
@@ -84,6 +88,27 @@ export default function GetCateringMenu() {
           `-- updated ${latestUpdate.toLocaleDateString()} --`
         )}
       </p>
+
+      <button
+        onClick={handlePrint}
+        className={`${supplyMonoRegular.className} bg-green hover:bg-[#46613d] text-white uppercase px-4 py-2 rounded w-fit mx-auto flex flex-row gap-4 transition-colors duration-300`}
+      >
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M18 3H6V7H18V3ZM19 12C18.7348 12 18.4804 11.8946 18.2929 11.7071C18.1054 11.5196 18 11.2652 18 11C18 10.7348 18.1054 10.4804 18.2929 10.2929C18.4804 10.1054 18.7348 10 19 10C19.2652 10 19.5196 10.1054 19.7071 10.2929C19.8946 10.4804 20 10.7348 20 11C20 11.2652 19.8946 11.5196 19.7071 11.7071C19.5196 11.8946 19.2652 12 19 12ZM16 19H8V14H16V19ZM19 8H5C4.20435 8 3.44129 8.31607 2.87868 8.87868C2.31607 9.44129 2 10.2044 2 11V17H6V21H18V17H22V11C22 10.2044 21.6839 9.44129 21.1213 8.87868C20.5587 8.31607 19.7956 8 19 8Z"
+              fill="white"
+            />
+          </svg>
+        </span>
+        Print Menu
+      </button>
 
       <div className="flex flex-col text-left">
         {/* Render breakfast items */}
