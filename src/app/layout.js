@@ -2,6 +2,8 @@ import "./globals.css";
 import { supplySansMedium } from "./styles/fonts";
 import TheHeader from "./components/TheHeader";
 import TheFooter from "./components/TheFooter";
+import Image from "next/image";
+import paperBagBackground from "../../public/images/brown-paper-background.png";
 
 export const metadata = {
   title: "Meat Cheese Bread, a Portland, Oregon Restaurant | 503-234-1700",
@@ -34,11 +36,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className="bg-[url('/images/brown-paper-background.png')] md:bg-[url('/images/brown-paper-background.webp')] bg-no-repeat bg-center bg-fixed bg-cover"
-    >
+    <html lang="en">
       <body className="flex flex-col relative min-h-screen max-w-screen">
+        <Image
+          src={paperBagBackground}
+          alt=""
+          fill
+          priority={true}
+          quality={100}
+          className="-z-10 object-cover"
+        />
         <TheHeader />
         <main className="mx-4 md:mx-6 flex-1 border-x-2 border-black border-collapse">
           <div className={`${supplySansMedium.className} min-h-fit`}>
