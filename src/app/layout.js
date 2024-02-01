@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
           <filter id="roughpaper">
             <feTurbulence
               type="fractalNoise"
-              baseFrequency="0.035"
+              baseFrequency="0.04"
               result="noise"
               numOctaves="5"
             />
