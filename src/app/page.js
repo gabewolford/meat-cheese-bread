@@ -44,12 +44,45 @@ export default function HomePage() {
     <>
       <section className="grid grid-cols-5">
         <div className="col-span-5 md:col-span-3 flex flex-col gap-4 justify-center p-8 lg:p-16 border-b-2 md:border-b-0 md:border-r-2 border-black">
+          {/* Mobile */}
           <h2
-            className={`${headlineOutline.className} text-4xl md:text-5xl lg:text-6xl xl:text-7xl`}
+            className={`${headlineShadow.className} md:hidden text-4xl md:text-5xl lg:text-6xl xl:text-[62px]`}
             style={{ lineHeight: "140%" }}
           >
             Slinging fancy sandwiches on Stark St since{" "}
-            <span className={`${headlineShadow.className}`}>&nbsp;2001</span>
+            <span className={`${headlineShadow.className}`}> 20??</span>
+          </h2>
+          {/* Tablet */}
+          <h2
+            className={`${headlineOutline.className} hidden md:block lg:hidden md:text-5xl lg:text-6xl xl:text-[62px]`}
+            style={{ lineHeight: "140%" }}
+          >
+            Slinging fancy sandwiches on Stark St since
+            <span className={`${headlineShadow.className}`}> 20??</span>
+          </h2>
+          {/* Large Screens */}
+          <h2
+            className={`${headlineOutline.className} hidden lg:block xl:hidden lg:text-6xl xl:text-[62px]`}
+            style={{ lineHeight: "140%" }}
+          >
+            Slinging fancy sandwiches on Stark St since
+            <span className={`${headlineShadow.className}`}> 20??</span>
+          </h2>
+          {/* XL Screens */}
+          <h2
+            className={`${headlineOutline.className} hidden xl:block 2xl:hidden xl:text-7xl`}
+            style={{ lineHeight: "140%" }}
+          >
+            Slinging fancy sandwiches on Stark St since
+            <span className={`${headlineShadow.className}`}> 20??</span>
+          </h2>
+          {/* 2XL Screens */}
+          <h2
+            className={`${headlineOutline.className} hidden 2xl:block xl:text-[62px]`}
+            style={{ lineHeight: "140%" }}
+          >
+            Slinging fancy sandwiches on Stark St since
+            <span className={`${headlineShadow.className}`}> 20??</span>
           </h2>
           <PrimaryButton
             linkTo="/menu"
