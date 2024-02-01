@@ -87,7 +87,7 @@ export default function HomePage() {
           <PrimaryButton
             linkTo="/menu"
             hoverColor="red"
-            buttonText="View our menu"
+            buttonText="Explore the menu"
           />
         </div>
         <div className="col-span-5 md:col-span-2 flex justify-center items-center  p-4 md:p-8">
