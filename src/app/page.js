@@ -50,7 +50,7 @@ export default function HomePage() {
             style={{ lineHeight: "130%" }}
           >
             Slinging fancy sandwiches on Stark St since{" "}
-            <span className={`${headlineShadow.className}`}> 20??</span>
+            <span className={`${headlineShadow.className}`}> 2008</span>
           </h2>
           {/* Tablet */}
           <h2
@@ -58,7 +58,7 @@ export default function HomePage() {
             style={{ lineHeight: "120%" }}
           >
             Slinging fancy sandwiches on Stark St since
-            <span className={`${headlineShadow.className}`}> 20??</span>
+            <span className={`${headlineShadow.className}`}> 2008</span>
           </h2>
           {/* Large Screens */}
           <h2
@@ -66,7 +66,7 @@ export default function HomePage() {
             style={{ lineHeight: "120%" }}
           >
             Slinging fancy sandwiches on Stark St since
-            <span className={`${headlineShadow.className}`}> 20??</span>
+            <span className={`${headlineShadow.className}`}> 2008</span>
           </h2>
           {/* XL Screens */}
           <h2
@@ -74,7 +74,7 @@ export default function HomePage() {
             style={{ lineHeight: "120%" }}
           >
             Slinging fancy sandwiches on Stark St since
-            <span className={`${headlineShadow.className}`}> 20??</span>
+            <span className={`${headlineShadow.className}`}> 2008</span>
           </h2>
           {/* 2XL Screens */}
           <h2
@@ -82,7 +82,7 @@ export default function HomePage() {
             style={{ lineHeight: "120%" }}
           >
             Slinging fancy sandwiches on Stark St since
-            <span className={`${headlineShadow.className}`}> 20??</span>
+            <span className={`${headlineShadow.className}`}> 2008</span>
           </h2>
           <PrimaryButton
             linkTo="/menu"
