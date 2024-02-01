@@ -159,7 +159,7 @@ export default function LocationPage() {
         </div>
       </section>
 
-      <QuadrupleImage
+      {/* <QuadrupleImage
         photo1={red}
         altText1="placeholder"
         photo2={yellow}
@@ -168,7 +168,7 @@ export default function LocationPage() {
         altText3="placeholder"
         photo4={green}
         altText4="placeholder"
-      />
+      /> */}
 
       <PhotoRightCTA
         heading="Are you hungry yet?"

@@ -70,12 +70,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <DoubleImage
+      {/* <DoubleImage
         photo1={red}
         altText1="placeholder"
         photo2={yellow}
         altText2="placeholder"
-      />
+      /> */}
 
       <PhotoRightCTA
         heading="Are you hungry yet?"
