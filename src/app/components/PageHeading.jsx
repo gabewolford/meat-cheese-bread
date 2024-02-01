@@ -1,8 +1,8 @@
-import { ReenieBeanie } from "../styles/fonts";
+import { headlineOutline } from "../styles/fonts";
 
 export default function PageHeading({ headingText }) {
   return (
-    <h2 className={`${ReenieBeanie.className} text-6xl md:text-7xl`}>
+    <h2 className={`${headlineOutline.className} text-2xl md:text-4xl`}>
       {headingText}
     </h2>
   );

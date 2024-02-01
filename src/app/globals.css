@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#paper-effect {
+  filter: url(#roughpaper);
+}

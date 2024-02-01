@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import headerLogo from "../../../public/images/meat-cheese-bread-header-logo.svg";
-import { ReenieBeanie, supplyMonoRegular } from "../styles/fonts";
+import { supplyMonoRegular } from "../styles/fonts";
 import CurrentDate from "./CurrentDate";
 import NavLinks from "./NavLinks";
 
@@ -10,7 +10,7 @@ export default function TheHeader() {
     <header className="flex flex-col border-2 border-black mx-4 mt-4 md:mx-6 md:mt-6">
       <section className="flex flex-col gap-2 lg:gap-6 p-4 lg:p-6">
         <p
-          className={`${ReenieBeanie.className} text-lg lg:text-2xl text-center`}
+          className={`${supplyMonoRegular.className} text-xs lg:text-base uppercase text-center`}
         >
           <CurrentDate />
         </p>
@@ -19,7 +19,7 @@ export default function TheHeader() {
           <Image
             src={headerLogo}
             alt="Meat Cheese Bread"
-            className="w-full md:w-5/6 mb-1.5"
+            className="w-full md:mx-16 mb-1.5"
             priority={true}
           />
         </Link>

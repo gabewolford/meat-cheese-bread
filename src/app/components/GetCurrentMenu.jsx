@@ -7,7 +7,7 @@ import { GetMenuData } from "../lib/data";
 import {
   supplyMonoUltralight,
   supplyMonoRegular,
-  supplyMonoBold,
+  headlineShadow,
 } from "../styles/fonts";
 import PageHeading from "./PageHeading";
 
@@ -79,13 +79,11 @@ export default function GetCurrentMenu() {
   };
 
   return (
-    <SkeletonTheme baseColor="#D2AC83" highlightColor="#BB9974">
+    <SkeletonTheme baseColor="#DAB68F" highlightColor="#344B2D">
       <PageHeading headingText="Current Menu" />
 
       <div>
-        <p
-          className={`${supplyMonoBold.className} uppercase text-sm text-green`}
-        >
+        <p className={`${supplyMonoRegular.className} text-sm uppercase`}>
           {isLoading ? (
             <Skeleton width={200} />
           ) : (
@@ -117,59 +115,63 @@ export default function GetCurrentMenu() {
 
       <div className="flex flex-col text-left">
         {/* Render breakfast items */}
-        <h3 className="text-2xl lg:text-3xl text-green mb-4">Breakfast</h3>
+        <h3 className={`${headlineShadow.className} text-2xl text-green mb-4`}>
+          Breakfast
+        </h3>
         {isLoading ? (
-          // Render Skeleton components while loading
           <div className="flex flex-col mb-12">
             <Skeleton count={6} className="mb-3.5" />
           </div>
         ) : (
-          // Render actual content when not loading
           <ul className="flex flex-col mb-12">
             {breakfastItems.map((item, index) => (
               <li
                 key={index}
                 className={`${supplyMonoRegular.className} uppercase mb-2`}
               >
-                {item.name} -{" "}
+                {item.name}{" "}
                 <span className={`${supplyMonoUltralight.className} lowercase`}>
-                  {item.description}{" "}
+                  {item.description ? `- ${item.description} ` : ""}
                 </span>
-                <span className={`${supplyMonoRegular.className} uppercase`}>
-                  ☞ ${item.price}
-                </span>
+                {item.price && (
+                  <span className={`${supplyMonoRegular.className} uppercase`}>
+                    ☞ ${item.price}
+                  </span>
+                )}
               </li>
             ))}
           </ul>
         )}
 
         {/* Render cold sandwich items */}
-        <h3 className="text-2xl lg:text-3xl text-green mb-4">
+        <h3 className={`${headlineShadow.className} text-2xl text-green mb-4 `}>
           Cold Sandwiches
         </h3>
         <div>
           {isLoading ? (
-            // Render Skeleton components while loading
             <div className="flex flex-col mb-12">
               <Skeleton count={4} className="mb-3.5" />
             </div>
           ) : (
-            // Render actual content when not loading
             <ul className="flex flex-col gap-1 mb-12">
               {coldSandwichesItems.map((item, index) => (
                 <li
                   key={index}
                   className={`${supplyMonoRegular.className} uppercase mb-2`}
                 >
-                  {item.name} -{" "}
+                  {item.name}{" "}
                   <span
                     className={`${supplyMonoUltralight.className} lowercase`}
                   >
-                    {item.description}{" "}
+                    {item.description ? `- ${item.description} ` : ""}
                   </span>
-                  <span className={`${supplyMonoRegular.className} uppercase`}>
-                    ☞ ${item.price}
-                  </span>
+                  {item.price && (
+                    <span
+                      className={`${supplyMonoRegular.className} uppercase`}
+                    >
+                      ☞ ${item.price}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -177,30 +179,34 @@ export default function GetCurrentMenu() {
         </div>
 
         {/* Render hot sandwich items */}
-        <h3 className="text-2xl lg:text-3xl text-green mb-4">Hot Sandwiches</h3>
+        <h3 className={`${headlineShadow.className} text-2xl text-green mb-4 `}>
+          Hot Sandwiches
+        </h3>
         <div>
           {isLoading ? (
-            // Render Skeleton components while loading
             <div className="flex flex-col mb-12">
               <Skeleton count={4} className="mb-3.5" />
             </div>
           ) : (
-            // Render actual content when not loading
             <ul className="flex flex-col gap-1 mb-12">
               {hotSandwichesItems.map((item, index) => (
                 <li
                   key={index}
                   className={`${supplyMonoRegular.className} uppercase mb-2`}
                 >
-                  {item.name} -{" "}
+                  {item.name}{" "}
                   <span
                     className={`${supplyMonoUltralight.className} lowercase`}
                   >
-                    {item.description}{" "}
+                    {item.description ? `- ${item.description} ` : ""}
                   </span>
-                  <span className={`${supplyMonoRegular.className} uppercase`}>
-                    ☞ ${item.price}
-                  </span>
+                  {item.price && (
+                    <span
+                      className={`${supplyMonoRegular.className} uppercase`}
+                    >
+                      ☞ ${item.price}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -208,30 +214,34 @@ export default function GetCurrentMenu() {
         </div>
 
         {/* Render salad items */}
-        <h3 className="text-2xl lg:text-3xl text-green mb-4">Salads</h3>
+        <h3 className={`${headlineShadow.className} text-2xl text-green mb-4 `}>
+          Salads
+        </h3>
         <div>
           {isLoading ? (
-            // Render Skeleton components while loading
             <div className="flex flex-col mb-12">
               <Skeleton count={4} className="mb-3.5" />
             </div>
           ) : (
-            // Render actual content when not loading
             <ul className="flex flex-col gap-1 mb-12">
               {saladItems.map((item, index) => (
                 <li
                   key={index}
                   className={`${supplyMonoRegular.className} uppercase mb-2`}
                 >
-                  {item.name} -{" "}
+                  {item.name}{" "}
                   <span
                     className={`${supplyMonoUltralight.className} lowercase`}
                   >
-                    {item.description}{" "}
+                    {item.description ? `- ${item.description} ` : ""}
                   </span>
-                  <span className={`${supplyMonoRegular.className} uppercase`}>
-                    ☞ ${item.price}
-                  </span>
+                  {item.price && (
+                    <span
+                      className={`${supplyMonoRegular.className} uppercase`}
+                    >
+                      ☞ ${item.price}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -240,15 +250,17 @@ export default function GetCurrentMenu() {
 
         <div className="flex flex-col md:flex-row w-full">
           <div className="flex flex-col w-full lg:w-1/2">
-            <h3 className="text-2xl lg:text-3xl text-green mb-4">Sides</h3>
+            <h3
+              className={`${headlineShadow.className} text-2xl text-green mb-4 `}
+            >
+              Sides
+            </h3>
             <div>
               {isLoading ? (
-                // Render Skeleton components while loading
                 <div className="flex flex-col mb-12">
                   <Skeleton count={6} width={250} className="mb-3.5" />
                 </div>
               ) : (
-                // Render actual content when not loading
                 <ul className="flex flex-col gap-1 mb-12">
                   {sideItems.map((item, index) => (
                     <li
@@ -257,10 +269,17 @@ export default function GetCurrentMenu() {
                     >
                       {item.name}{" "}
                       <span
-                        className={`${supplyMonoRegular.className} uppercase`}
+                        className={`${supplyMonoUltralight.className} lowercase`}
                       >
-                        ☞ ${item.price}
+                        {item.description ? `- ${item.description} ` : ""}
                       </span>
+                      {item.price && (
+                        <span
+                          className={`${supplyMonoRegular.className} uppercase`}
+                        >
+                          ☞ ${item.price}
+                        </span>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -269,15 +288,17 @@ export default function GetCurrentMenu() {
           </div>
 
           <div className="flex flex-col w-full lg:w-1/2">
-            <h3 className="text-2xl lg:text-3xl text-green mb-4">Sweets</h3>
+            <h3
+              className={`${headlineShadow.className} text-2xl text-green mb-4 `}
+            >
+              Sweets
+            </h3>
             <div>
               {isLoading ? (
-                // Render Skeleton components while loading
                 <div className="flex flex-col mb-12">
                   <Skeleton count={3} width={250} className="mb-3.5" />
                 </div>
               ) : (
-                // Render actual content when not loading
                 <ul className="flex flex-col gap-1 mb-12">
                   {sweetItems.map((item, index) => (
                     <li
@@ -286,10 +307,17 @@ export default function GetCurrentMenu() {
                     >
                       {item.name}{" "}
                       <span
-                        className={`${supplyMonoRegular.className} uppercase`}
+                        className={`${supplyMonoUltralight.className} lowercase`}
                       >
-                        ☞ ${item.price}
+                        {item.description ? `- ${item.description} ` : ""}
                       </span>
+                      {item.price && (
+                        <span
+                          className={`${supplyMonoRegular.className} uppercase`}
+                        >
+                          ☞ ${item.price}
+                        </span>
+                      )}
                     </li>
                   ))}
                 </ul>

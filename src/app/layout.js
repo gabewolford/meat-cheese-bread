@@ -2,8 +2,6 @@ import "./globals.css";
 import { supplySansMedium } from "./styles/fonts";
 import TheHeader from "./components/TheHeader";
 import TheFooter from "./components/TheFooter";
-import Image from "next/image";
-import paperBagBackground from "../../public/images/brown-paper-background.png";
 
 export const metadata = {
   title: "Meat Cheese Bread, a Portland, Oregon Restaurant | 503-234-1700",
@@ -37,15 +35,30 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex flex-col relative min-h-screen max-w-screen">
-        <Image
-          src={paperBagBackground}
-          alt=""
-          fill
-          priority={true}
-          quality={100}
-          className="-z-10 object-cover"
-        />
+      <body className="flex flex-col relative h-full w-full">
+        <div
+          id="paper-effect"
+          className="m-auto w-full h-full absolute -z-50"
+        ></div>
+        <div className="w-full h-full flex"></div>
+        <svg className="w-0 h-0">
+          <filter id="roughpaper">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.035"
+              result="noise"
+              numOctaves="5"
+            />
+
+            <feDiffuseLighting
+              in="noise"
+              lighting-color="#DAB68F"
+              surfaceScale="2"
+            >
+              <feDistantLight azimuth="45" elevation="60" />
+            </feDiffuseLighting>
+          </filter>
+        </svg>
         <TheHeader />
         <main className="mx-4 md:mx-6 flex-1 border-x-2 border-black border-collapse">
           <div className={`${supplySansMedium.className} min-h-fit`}>

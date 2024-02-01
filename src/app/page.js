@@ -2,13 +2,9 @@ import PhotoRightCTA from "./components/PhotoRightCTA";
 import PhotoLeftCTA from "./components/PhotoLeftCTA";
 import DoubleImage from "./components/DoubleImage";
 import QuadrupleImage from "./components/QuadrupleImage";
-import red from "../../public/images/red.png";
-import yellow from "../../public/images/yellow.png";
-import brown from "../../public/images/brown.png";
-import green from "../../public/images/green.png";
-import heroImage from "../../public/images/hero-image.png";
-import Image from "next/image";
 import KissingSandwichLogo from "./components/Logos/KissingSandwichLogo";
+import { headlineOutline, headlineShadow } from "./styles/fonts";
+import PrimaryButton from "./components/PrimaryButton";
 
 export const metadata = {
   metadataBase: new URL("https://meatcheesebread.com"),
@@ -47,29 +43,33 @@ export default function HomePage() {
   return (
     <>
       <section className="grid grid-cols-5">
-        <div className="col-span-5 md:col-span-3 flex justify-center items-center p-4 md:p-8 md:border-r-2 border-black">
-          <h2 className="h-[350px] flex items-center">Hero Text Goes Here.</h2>
+        <div className="col-span-5 md:col-span-3 flex flex-col gap-4 justify-center p-8 lg:p-16 border-b-2 md:border-b-0 md:border-r-2 border-black">
+          <h2
+            className={`${headlineOutline.className} text-4xl md:text-5xl lg:text-6xl xl:text-7xl`}
+            style={{ lineHeight: "140%" }}
+          >
+            Slinging fancy sandwiches on Stark St since{" "}
+            <span className={`${headlineShadow.className}`}>&nbsp;2001</span>
+          </h2>
+          <PrimaryButton
+            linkTo="/menu"
+            hoverColor="red"
+            buttonText="View our menu"
+          />
         </div>
         <div className="col-span-5 md:col-span-2 flex justify-center items-center  p-4 md:p-8">
           <KissingSandwichLogo fillColorHash="#000000" />
         </div>
       </section>
 
-      <DoubleImage
+      {/* <DoubleImage
         photo1={red}
         altText1="red placeholder"
         photo2={yellow}
         altText2="yellow placeholder"
-      />
+      /> */}
 
-      <PhotoLeftCTA
-        heading="Catering an event?"
-        linkTo="/catering"
-        buttonText="View catering menu"
-        hoverColor="yellow"
-      />
-
-      <QuadrupleImage
+      {/* <QuadrupleImage
         photo1={red}
         altText1="red placeholder"
         photo2={yellow}
@@ -78,13 +78,13 @@ export default function HomePage() {
         altText3="brown placeholder"
         photo4={green}
         altText4="green placeholder"
-      />
+      /> */}
 
-      <PhotoRightCTA
-        heading="Are you hungry yet?"
-        linkTo="/menu"
-        buttonText="Explore the menu"
-        hoverColor="red"
+      <PhotoLeftCTA
+        heading="Catering an event?"
+        linkTo="/catering"
+        buttonText="View catering menu"
+        hoverColor="yellow"
       />
     </>
   );
