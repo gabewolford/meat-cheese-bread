@@ -1,7 +1,12 @@
 import localFont from "next/font/local";
-import { Reenie_Beanie } from "next/font/google";
 
-const ReenieBeanie = Reenie_Beanie({ subsets: ["latin"], weight: "400" });
+const headlineOutline = localFont({
+  src: "./fonts/HeadlineOutline.woff2",
+});
+
+const headlineShadow = localFont({
+  src: "./fonts/HeadlineShadow.woff2",
+});
 
 const supplyMonoBold = localFont({
   src: "./fonts/PPSupplyMono-Bold.woff2",
@@ -36,7 +41,8 @@ const supplySansUltralight = localFont({
 });
 
 export {
-  ReenieBeanie,
+  headlineOutline,
+  headlineShadow,
   supplyMonoBold,
   supplyMonoMedium,
   supplyMonoRegular,
