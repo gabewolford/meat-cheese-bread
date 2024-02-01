@@ -70,7 +70,7 @@ export default function HomePage() {
           </h2>
           {/* XL Screens */}
           <h2
-            className={`${headlineOutline.className} hidden xl:block 2xl:hidden xl:text-7xl`}
+            className={`${headlineOutline.className} hidden xl:block 2xl:hidden xl:text-[80px]`}
             style={{ lineHeight: "140%" }}
           >
             Slinging fancy sandwiches on Stark St since
@@ -78,7 +78,7 @@ export default function HomePage() {
           </h2>
           {/* 2XL Screens */}
           <h2
-            className={`${headlineOutline.className} hidden 2xl:block xl:text-[62px]`}
+            className={`${headlineOutline.className} hidden 2xl:block xl:text-7xl`}
             style={{ lineHeight: "140%" }}
           >
             Slinging fancy sandwiches on Stark St since
