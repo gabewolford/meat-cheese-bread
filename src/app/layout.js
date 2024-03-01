@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
 
             <feDiffuseLighting
               in="noise"
-              lighting-color="#DAB68F"
+              lightingColor="#DAB68F"
               surfaceScale="2"
             >
               <feDistantLight azimuth="45" elevation="60" />
