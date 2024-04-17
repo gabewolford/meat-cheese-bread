@@ -116,7 +116,7 @@ export default function HomePage() {
       <PhotoLeftCTA
         heading="Catering an event?"
         linkTo="/catering"
-        buttonText="View catering menu"
+        buttonText="Learn more"
         hoverColor="yellow"
       />
     </>
