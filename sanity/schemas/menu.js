@@ -12,13 +12,17 @@ export const menu = {
       options: {
         list: [
           { title: "Breakfast", value: "Breakfast" },
-          { title: "Cold Sandwiches", value: "Cold Sandwiches" },
+          {
+            title: "Cold Sandwiches",
+            value: "Cold Sandwiches",
+          },
           { title: "Hot Sandwiches", value: "Hot Sandwiches" },
           { title: "Salads", value: "Salads" },
           { title: "Sides", value: "Sides" },
           { title: "Sweets", value: "Sweets" },
         ],
       },
+      readOnly: true,
     },
     {
       name: "items",
@@ -35,7 +39,7 @@ export const menu = {
               title: "Name",
               type: "string",
               description: "The name of the menu item",
-              validation: (Rule) => Rule.required().min(1).max(80),
+              validation: (Rule) => Rule.required(),
             },
             {
               name: "description",
