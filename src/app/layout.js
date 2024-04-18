@@ -2,6 +2,8 @@ import "./globals.css";
 import { supplySansMedium } from "./styles/fonts";
 import TheHeader from "./components/TheHeader";
 import TheFooter from "./components/TheFooter";
+import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   title: "Meat Cheese Bread, a Portland, Oregon Restaurant | 503-234-1700",
@@ -67,6 +69,8 @@ export default function RootLayout({ children }) {
         </main>
         <TheFooter />
       </body>
+      <Analytics />
+      <GoogleAnalytics gaId="G-3KYMLRM9RY" />
     </html>
   );
 }

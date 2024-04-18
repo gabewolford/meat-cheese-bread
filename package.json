@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.2",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.24.1",
+    "@vercel/analytics": "^1.2.2",
     "next": "^14.2.1",
     "next-sanity": "^7.0.10",
     "react": "^18",
