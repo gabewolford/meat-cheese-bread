@@ -62,7 +62,7 @@ export default function CateringPage() {
                     Current Menu
                   </Link>
                 </span>{" "}
-                and give us a call when you&apost;re ready to order or if you
+                and give us a call when you&apos;re ready to order or if you
                 have any questions.
               </p>
               <div className="flex flex-row gap-4 items-center mx-auto lg:mx-0">
