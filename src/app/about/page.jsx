@@ -26,14 +26,14 @@ export const metadata = {
     url: "https://meatcheesebread.com/about",
     images: [
       {
-        url: "https://meat-cheese-bread.vercel.app/images/og-image.png",
+        url: "https://meatcheesebread.com/images/og-image.png",
         alt: "Meat Cheese Bread",
       },
     ],
   },
   images: [
     {
-      url: "https://meat-cheese-bread.vercel.app/images/og-image.png",
+      url: "https://meatcheesebread.com/images/og-image.png",
       alt: "Meat Cheese Bread",
     },
   ],
