@@ -133,10 +133,20 @@ export default function TheFooter() {
           <NavLinks />
         </section>
         <section
-          className={`${supplyMonoRegular.className} flex border-b-2 border-black w-full text-center`}
+          className={`${supplyMonoRegular.className} flex flex-col gap-2 border-b-2 p-5 border-black w-full text-center`}
         >
-          <div className={`text-xs w-full py-4 uppercase h-full`}>
+          <div className={`text-base w-full uppercase h-full`}>
             © 2024 Meat Cheese Bread
+          </div>
+          <div className={`text-xs w-full uppercase h-full`}>
+            Website by{" "}
+            <a
+              href="https://biiigstretch.studio"
+              target="_blank"
+              className="hover:text-green"
+            >
+              Biiig Stretch
+            </a>
           </div>
         </section>
       </div>

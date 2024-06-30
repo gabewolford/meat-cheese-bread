@@ -9,7 +9,7 @@ export default function PhotoRightCTA({
 }) {
   return (
     <section className="grid grid-cols-1 md:grid-cols-6">
-      <div className="col-span-1 md:col-span-4 py-12 px-4 md:px-6 border-t-2 border-black flex flex-col justify-center items-center gap-4 md:gap-6">
+      <div className="col-span-1 md:col-span-4 pt-12 pb-0 lg:py-12 px-4 md:px-6 border-t-2 border-black flex flex-col justify-center items-center gap-4 md:gap-6">
         <h5 className={`${supplySansMedium.className} text-3xl lg:text-4xl`}>
           {heading}
         </h5>
